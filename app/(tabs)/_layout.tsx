@@ -12,12 +12,16 @@ export default function TabLayout() {
 }
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: "green",
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
   liberty: {
     fontSize: 30,
     color: "red",
-  },
-  page: {
-    backgroundColor: "white",
-    flex: 1,
   },
 });
