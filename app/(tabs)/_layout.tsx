@@ -4,15 +4,25 @@ import { View, Text, StyleSheet, Button } from "react-native";
 export default function TabLayout() {
   return (
     <View style={styles.page}>
-      <Text style={styles.liberty}>
-        My name is Liberty, I'm a graduate from Computer Engineering.
-      </Text>
-      <View style={styles.wrapperBtn}>
-        <Button title="Continue" />
+      <View
+        style={{
+          backgroundColor: "red",
+          paddingTop: 10,
+          paddingBottom: 10,
+          marginBottom: 10,
+        }}
+      >
+        <Text>A for Apple</Text>
       </View>
-      <Button title="Start" />
-      <View>
-        <View></View>
+      <View
+        style={{
+          backgroundColor: "green",
+          paddingTop: 10,
+          paddingBottom: 10,
+          marginBottom: 10,
+        }}
+      >
+        <Text>B for Babble</Text>
       </View>
     </View>
   );
@@ -21,7 +31,7 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: "green",
+    backgroundColor: "white",
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 20,
