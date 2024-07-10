@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 
 export default function TabLayout() {
   return (
@@ -7,6 +7,10 @@ export default function TabLayout() {
       <Text style={styles.liberty}>
         My name is Liberty, I'm a graduate from Computer Engineering.
       </Text>
+      <View style={styles.wrapperBtn}>
+        <Button title="Continue" />
+      </View>
+      <Button title="Start" />
     </View>
   );
 }
@@ -23,5 +27,9 @@ const styles = StyleSheet.create({
   liberty: {
     fontSize: 30,
     color: "red",
+  },
+  wrapperBtn: {
+    marginBottom: 20,
+    marginTop: 20,
   },
 });
