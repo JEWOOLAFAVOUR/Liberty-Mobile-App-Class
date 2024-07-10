@@ -11,6 +11,9 @@ export default function TabLayout() {
         <Button title="Continue" />
       </View>
       <Button title="Start" />
+      <View>
+        <View></View>
+      </View>
     </View>
   );
 }
