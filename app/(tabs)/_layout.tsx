@@ -1,25 +1,36 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 import React from "react";
 
 const _layout = () => {
   return (
     <View style={styles.page}>
-      <Image
-        source={require("../../assets/images/boy.jpg")}
-        style={{ height: 200, width: 200, borderRadius: 200 }}
-      />
-      <Image
-        source={{
-          uri: "https://img.freepik.com/free-photo/front-view-smiling-happy-cute-kid-dressed-striped-shirt-touching-his-spectacles-with-one-hand_259150-59788.jpg?t=st=1720780994~exp=1720784594~hmac=657a8acb281fc16022db87852189d161ee79ead2aa0be4f3eafe7ff7d3682b45&w=360",
-        }}
-        style={{ height: 200, width: 200, marginTop: 20 }}
-      />
-
-      <TouchableOpacity style={styles.clickBtn}>
-        <Text style={{ fontSize: 20, color: "#fff", fontWeight: "bold" }}>
-          Click Me
+      <View style={{ marginBottom: 20 }}>
+        <Text style={{ fontSize: 15, color: "black", fontWeight: "bold" }}>
+          First Name
         </Text>
-      </TouchableOpacity>
+        <View style={styles.inputContainer}>
+          <TextInput
+            placeholder="enter first name"
+            placeholderTextColor={"grey"}
+            secureTextEntry={true}
+            style={{ fontSize: 14, color: "black" }}
+          />
+        </View>
+      </View>
+      <View>
+        <Text style={{ fontSize: 15, color: "black", fontWeight: "bold" }}>
+          Email
+        </Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            placeholder="enter first name"
+            placeholderTextColor={"grey"}
+            keyboardType="number-pad"
+            secureTextEntry={true}
+            style={{ fontSize: 14, color: "black" }}
+          />
+        </View>
+      </View>
     </View>
   );
 };
@@ -30,16 +41,16 @@ const styles = StyleSheet.create({
   page: {
     flex: 1,
     backgroundColor: "#ffffff",
-    paddingHorizontal: 30,
-    paddingVertical: 30,
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
-  clickBtn: {
-    height: 50,
-    width: 150,
-    backgroundColor: "blue",
+  inputContainer: {
+    height: 44,
+    borderWidth: 1,
+    marginTop: 8,
+    borderRadius: 5,
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: 20,
-    borderRadius: 10,
+    paddingHorizontal: 10,
+    borderColor: "grey",
   },
 });
