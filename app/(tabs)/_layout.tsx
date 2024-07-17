@@ -1,36 +1,78 @@
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 
 const _layout = () => {
+  const name = [
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+    "Favour",
+    "Liberty",
+    "Timi",
+    "Abdullahi",
+    "Ayomide",
+    "Damola",
+  ];
+
   return (
     <View style={styles.page}>
-      <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 15, color: "black", fontWeight: "bold" }}>
-          First Name
-        </Text>
-        <View style={styles.inputContainer}>
-          <TextInput
-            placeholder="enter first name"
-            placeholderTextColor={"grey"}
-            secureTextEntry={true}
-            style={{ fontSize: 14, color: "black" }}
-          />
-        </View>
-      </View>
-      <View>
-        <Text style={{ fontSize: 15, color: "black", fontWeight: "bold" }}>
-          Email
-        </Text>
-        <View style={styles.inputContainer}>
-          <TextInput
-            placeholder="enter first name"
-            placeholderTextColor={"grey"}
-            keyboardType="number-pad"
-            secureTextEntry={true}
-            style={{ fontSize: 14, color: "black" }}
-          />
-        </View>
-      </View>
+      <Text style={{ fontSize: 30, fontWeight: "bold", marginBottom: 15 }}>
+        This is the List Class
+      </Text>
+
+      <FlatList
+        data={name}
+        numColumns={2}
+        showsVerticalScrollIndicator={false}
+        columnWrapperStyle={{ justifyContent: "space-between" }}
+        renderItem={({ item }) => {
+          return (
+            <View style={styles.container}>
+              <Text>Hello</Text>
+              <TouchableOpacity style={{}}>
+                <Image
+                  source={require("../../assets/icons/arrowright.png")}
+                  style={{ height: 14, width: 14 }}
+                />
+              </TouchableOpacity>
+            </View>
+          );
+        }}
+      />
     </View>
   );
 };
@@ -40,17 +82,19 @@ export default _layout;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: "#ffffff",
-    paddingHorizontal: 20,
-    paddingTop: 20,
+    backgroundColor: "white",
+    paddingHorizontal: 13,
+    paddingTop: 10,
   },
-  inputContainer: {
-    height: 44,
+  container: {
+    height: 40,
+    width: 160,
     borderWidth: 1,
-    marginTop: 8,
     borderRadius: 5,
-    justifyContent: "center",
+    marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     paddingHorizontal: 10,
-    borderColor: "grey",
   },
 });
