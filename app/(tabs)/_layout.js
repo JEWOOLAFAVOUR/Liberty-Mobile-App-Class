@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native'
 import React from 'react'
+import { StatusBar } from 'expo-status-bar'
 
 const _layout = () => {
   return (
     <View style={styles.page}>
+      <StatusBar backgroundColor={"green"} barStyle={'light-content'} />
       <View style={{ flex: 1 }}>
         <View style={styles.big}>
           <Text style={{ fontSize: 40, color: 'white', fontWeight: 'bold' }}>Zoom</Text>
@@ -12,9 +14,15 @@ const _layout = () => {
       <View style={styles.big2}>
         <Text style={{ fontSize: 40, color: 'white', fontWeight: 'bold' }}>2go</Text>
       </View>
+      <View style={{ height: 100, borderWidth: 1, paddingHorizontal: 20, justifyContent: 'center', }}>
+        <TextInput
+          placeholder='enter your name'
+          keyboardType='number-pad'
+        />
+      </View>
     </View>
-  )
-}
+  );
+};
 
 export default _layout
 
