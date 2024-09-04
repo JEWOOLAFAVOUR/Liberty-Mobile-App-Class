@@ -17,7 +17,8 @@ const _layout = () => {
       <View style={{ height: 100, borderWidth: 1, paddingHorizontal: 20, justifyContent: 'center', }}>
         <TextInput
           placeholder='enter your name'
-          keyboardType='number-pad'
+          keyboardType='email-address'
+          secureTextEntry={false}
         />
       </View>
     </View>
