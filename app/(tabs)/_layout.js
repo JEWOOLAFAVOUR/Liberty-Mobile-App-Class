@@ -1,67 +1,64 @@
-import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native'
+import { StyleSheet, Text, View, FlatList } from 'react-native'
 import React from 'react'
-import { StatusBar } from 'expo-status-bar'
 
 const _layout = () => {
+
+  const friends = ['Ade', "Bola", "Bimbo"]
+
+  const x = 10 // normal variable
+
+  const y = {
+    name: "x",
+    level: '100'
+  } // Object
+
+  const z = [1, 2, 3, 4] // array
+
   return (
     <View style={styles.page}>
-      <StatusBar backgroundColor={"green"} barStyle={'light-content'} />
-      <View style={{ flex: 1 }}>
-        <View style={styles.big}>
-          <Text style={{ fontSize: 40, color: 'white', fontWeight: 'bold' }}>Zoom</Text>
-        </View>
-      </View>
-      <View style={styles.big2}>
-        <Text style={{ fontSize: 40, color: 'white', fontWeight: 'bold' }}>2go</Text>
-      </View>
-      <View style={{ height: 100, borderWidth: 1, paddingHorizontal: 20, justifyContent: 'center', }}>
-        <TextInput
-          placeholder='enter your name'
-          keyboardType='email-address'
-          secureTextEntry={false}
-        />
-      </View>
+      <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold', marginBottom: 30 }}>List Class</Text>
+
+
+      <FlatList
+        data={z}
+        numColumns={2}
+        renderItem={({ item }) => {
+          return (
+            <View style={styles.container}>
+              <Text style={{ fontSize: 20, color: 'black', fontWeight: 'bold' }}>{item}</Text>
+            </View>
+          )
+        }}
+
+
+
+
+      />
+
+
     </View>
-  );
-};
+  )
+}
 
 export default _layout
 
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     paddingHorizontal: 20,
-    paddingTop: 10,
-    // justifyContent: 'flex-start',
-    // alignItems: 'flex-end',
+    paddingTop: 20,
   },
-  big: {
-    height: 200,
-    width: 200,
-    marginBottom: 10,
-    borderRadius: 200,
-    backgroundColor: 'blue',
+  container: {
+    height: 50,
+    width: 150,
+    borderWidth: 1,
+    borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'flex-end',
-    // flex: 1
-  },
-  big2: {
-    height: 200,
-    width: 200,
-    marginBottom: 10,
-    // borderRadius: 200,
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginBottom: 20,
   },
 });
-
-
-
-
-
 
 
 
